@@ -1,0 +1,110 @@
+<!--<div class="m-1">
+  <input class="form-control" value="{{resultado}}" disabled>
+</div>
+
+
+<div class="row p-1 mb-2">
+  <div class="col-3">
+    <button class="btn btn-primary w-100" (click)="clicar(0)">0</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary w-100">1</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary w-100">2</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary w-100">*</button>
+  </div>
+</div>
+
+<div class="row p-1 mb-2">
+  <div class="col-3">
+    <button class="btn btn-primary w-100">3</button>
+  </div>
+  <div class="col-3 ">
+    <button class="btn btn-primary w-100">4</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary w-100">5</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary w-100">/</button>
+  </div>
+</div>
+
+<div class="row p-1 mb-2">
+  <div class="col-3">
+    <button class="btn btn-primary w-100">6</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary w-100">7</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary w-100">8</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary w-100">-</button>
+  </div>
+</div>
+
+<div class="row p-1 mb-2">
+  <div class="col-3">
+    <button class="btn btn-primary w-100">9</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary w-100">CE</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-danger w-100">=</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary w-100">+</button>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <br />
+
+      <div class="calculadora">
+        <input type="text" id="input" class="form-control resultado" value="{{resultado}}" placeholder="0" disabled/>
+
+        <div class="row">
+          <button type="button" (click)="limpar()"class="btn btn-secondary btn-lg clear font-weight-light">C</button>
+          <button type="button" (click)="clicar('acao', '/')" class="btn btn-secondary btn-lg font-weight-light">/</button>
+          <button type="button" (click)="clicar('acao', '*')" class="btn btn-secondary btn-lg font-weight-light">x</button>
+        </div>
+
+        <div class="row">
+          <button type="button" (click)="clicar('valor', '7')" class="btn btn-dark btn-lg font-weight-light">7</button>
+          <button type="button" (click)="clicar('valor', '8')" class="btn btn-dark btn-lg font-weight-light">8</button>
+          <button type="button" (click)="clicar('valor', '9')" class="btn btn-dark btn-lg font-weight-light">9</button>
+          <button type="button" (click)="clicar('acao', '-')" class="btn btn-secondary btn-lg font-weight-light">-</button>
+        </div>
+
+        <div class="row">
+          <button type="button" (click)="clicar('valor', '4')" class="btn btn-dark btn-lg font-weight-light">4</button>
+          <button type="button" (click)="clicar('valor', '5')" class="btn btn-dark btn-lg font-weight-light">5</button>
+          <button type="button" (click)="clicar('valor', '6')" class="btn btn-dark btn-lg font-weight-light">6</button>
+          <button type="button" (click)="clicar('acao', '+')" class="btn btn-secondary btn-lg font-weight-light">+</button>
+        </div>
+
+        <div class="row">
+          <button type="button" (click)="clicar('valor', '1')" class="btn btn-dark btn-lg font-weight-light">1</button>
+          <button type="button" (click)="clicar('valor', '2')" class="btn btn-dark btn-lg font-weight-light">2</button>
+          <button type="button" (click)="clicar('valor', '3')" class="btn btn-dark btn-lg font-weight-light">3</button>
+          <button type="button" (click)="calcular()" class="btn btn-danger btn-lg enter">=</button>
+        </div>
+
+        <div class="row" style="margin-top: -60px">
+          <button type="button" (click)="clicar('valor', '0')" class="btn btn-dark zero btn-lg font-weight-light">0</button>
+          <button type="button" (click)="clicar('acao', '.')" class="btn btn-secondary btn-lg font-weight-light">.</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
